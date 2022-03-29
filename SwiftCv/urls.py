@@ -9,9 +9,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('',homeviews.home),
     path('', include('accounts.urls')),
-    path('', include('create.urls'), name='form_name'),
-    url(r'^media/(?P<path>.*)$', serve,
-        {'document_root':       settings.MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', serve,
-        {'document_root': settings.STATIC_ROOT}),
+    path('', include('create.urls'), name='form_name')
 ]
