@@ -5,7 +5,6 @@ from django.views import View
 from docxtpl import DocxTemplate, InlineImage
 
 import os
-import aspose.words as aw
 from docx2pdf import convert
 
 nameofthefiledisplay1 = 'generated'
