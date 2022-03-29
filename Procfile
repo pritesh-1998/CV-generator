@@ -1,1 +1,1 @@
-web: gunicorn SwiftCv.wsgi
+web:gunicorn SwiftCv.wsgi
