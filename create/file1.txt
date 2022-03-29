@@ -1,0 +1,5 @@
+bdegree1 =request.POST.get('bd')
+btown =request.POST.get('btown')
+binst = request.POST.get('binst')
+bcompletion = request.POST.get('bcompletion')
+bfinalscore = request.POST.get('bscore')}}

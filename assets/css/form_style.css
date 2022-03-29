@@ -1,0 +1,212 @@
+/*----------------------------------------- Google font imports */
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* adding animation */
+body{
+  animation: transform 500ms ease-in, opacity  1000ms ease-in
+  ;
+}
+
+@keyframes transform {
+  from{
+    transform: rotate(-5deg);
+  }
+  to{
+    transform: rotate(0deg);
+  }
+}
+@keyframes opacity {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+/*---------------------------------- Header Styling */
+.form-header {
+  padding: 1em;
+  background: #142044;
+  box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.37);
+}
+/*---------------------------------- Classes for the Navigation part*/
+/* Styling for the container of the icon */
+.circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  background-color: #ffdc51;
+  color: black;
+}
+/* ::after property on icon to display its 'title' below it */
+.circle::after {
+  /* The data-tool-tip attribute is given to each icon container and we use that attributes value to the content of after */
+  content: attr(data-tool-tip);
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  bottom: -20px;
+}
+/* ::before property on icon to show that part of the form is done with a tick icon */
+/* This style is only applied to those icons who's form is completed  */
+.complete::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1em;
+  font-weight: 900;
+  color: rgb(38, 187, 38);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/*----------------------------------------------- Styling the container and inputs inside of the container a.k.a page */
+.contains-forms {
+  margin: 10em 0; 
+}
+/* page styling, the outer container for different form inputs  */
+.page {
+  padding: 2em;
+  position: relative;
+  background: white;
+}
+/* Title for the form */
+.page-title {
+  padding: 0.5em;
+  margin: 0;
+  margin-bottom: 1.5em;
+  font-family: "Shippori Antique B1", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #434;
+  border-bottom: 2px solid #434;
+}
+/* Individual style for the image file input's label */
+.file-label {
+  margin: 1em;
+  width: 135px;
+  height: 150px;
+  border: 2px dashed #434;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Stying for each label of the respective input */
+.input-label {
+  display: block;
+  padding: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: black;
+  position: relative;
+}
+/* after property for those fields who has the class 'required' */
+.required::after{
+  content:'\f621';
+  font-size: .5em;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #C31;
+  position: absolute;
+  top: 1em;
+}
+
+/* Styling for all input fields */
+.input-style {
+  appearance: none;
+  outline: none;
+  border: 1.4px solid #434;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 0.6em;
+  margin: 0.5em;
+  margin-top: 0;
+  font-family: "Roboto Condensed";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #434;
+}
+select.input-style{
+  appearance: auto;
+}
+/* Giving all inputs a shadow when focus applied */
+.input-style:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+/* Styling for the fields who has the class 'invalid' */
+.invalid{
+  box-shadow: 0 0 15px #c31;
+}
+/* Styling for the template-view that is the container which will display the image of the template */
+.template-card{
+  display: block;
+  padding: 1em;
+  padding-bottom: 2em;
+  height: 250px;
+  width: 170px;
+  background-color: white;
+  transition: transform 350ms ease-in 50ms;
+}
+.template-card:hover{
+  transform: scale(1.3,1.3);
+}
+.template-img{
+  width: 100%;
+}
+/* Size of radio button */
+.radio-style{
+  width: 1.25em;
+  height: 1.25em;
+  accent-color: #f1c40f;
+  margin-top: .5em;
+}
+/*----------------------------------------- Tool-tip appearance and styling */
+.description-tt{
+  position: relative;
+}
+.description-tt::after{
+  /* Means whatever 'value' given to the attribute 'data-tool-tip' will become the content of the after element */
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute ;
+  padding: 1em 3em;
+  background-color: grey;
+  border-radius: 5px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size:0.8em;
+  bottom: 0;
+  left:0;
+  white-space: wrap;
+  transform: scale(0);
+  transition:
+  transform ease-out 250ms 1000ms,
+  bottom ease-out 250ms 1000ms;
+}
+.description-tt:hover::after{
+  transform: scale(1);
+  bottom: 100%;
+}
+
+/* Class for max length display */
+.max-display{
+  font-family: "Roboto Condensed";
+  font-size: .8rem;
+  font-weight: 400;
+  color: #434;
+  position: absolute;
+  right:25px;
+  top: 33px;
+}
+
+@media (max-width : 500px) {
+  .form-header{
+    width: 100vw;
+  }
+}

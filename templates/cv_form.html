@@ -1,0 +1,330 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <!-- Links for font awesome icons and its scripts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Custom Styling for the form -->
+    <link rel="stylesheet" href="{% static 'css\form_style.css' %}">
+    <!-- similar styles for all pages -->
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <!-- Image for the title -->
+    <link rel="shortcut icon" href="{% static 'img\favicon.jpeg' %}" type="image/png" />
+
+</head>
+
+<body>
+
+    <!-- Header Part -->
+    <header class="form-header text-center">
+        <img src="{% static 'img\logo2.png' %}" alt="Swrift CV">
+    </header>
+
+    <!-- Navigation -->
+    <!-- displays the icon for each form below header  -->
+    <nav class="py-2 d-flex justify-content-center">
+        <div class="container-sm d-flex justify-content-between">
+            <div><!--container for personal icon -->
+                <div id="personal-icon" data-tool-tip="Personal" class="circle box-shadow"><i class="fas fa-user-tie large"></i></div>
+            </div>
+            <div><!--container for experience icon -->
+                <div id="experience-icon" data-tool-tip="Experience" class="circle box-shadow"><i class="fas fa-file-alt large"></i></div>
+            </div>
+            <div><!--container for template icon -->
+                <div id="template-icon" data-tool-tip="Template" class="circle box-shadow"><i class="fas fa-pen large"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- This section contains all three forms -->
+    <section id="contains-forms" class="my-3">
+        <form>
+            <!-- This section will contain the inputs related to PERSONAL DETAILS -->
+            <section class="disappear" id="personal-section">
+                <div class="page container-md box-shadow b-radius-subtle">
+                    <!-- Title of the form in this case, title for personal details -->
+                    <h3 class="page-title">
+                        Personal Details
+                    </h3>
+                    <div class="lvl-1 d-flex justify-content-center flex-wrap flex-sm-nowrap">
+                        <!-- input for the image file -->
+                        <div>
+                            <label for="image-file" class="file-label d-flex justify-content-center align-items-center"><i class="fas fa-camera larger"></i></label>
+                            <input type="file" class="d-none" id="image-file" accept=".jpg,.png,.jpeg">
+                        </div>
+                        <!-- input for first name and last name -->
+                        <div class="d-flex dir-col fb-100">
+                            <label for="first-name" class="input-label required">First Name</label>
+                            <input type="text" maxlength="20" required id="first-name" class="input-style">
+                            <label for="last-name" class="input-label required">Last Name</label>
+                            <input type="text" maxlength="20" required id="last-name" class="input-style">
+                        </div>
+                    </div>
+                    <div class="lvl-2 d-flex flex-wrap ">
+                        <!-- input for e-mail address -->
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="e-mail" class="input-label required">E-mail Address</label>
+                            <input type="email" required maxlength="60" id="e-mail" class="input-style">
+                        </div>
+                        <!-- input for phone number -->
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="phone-no" class="input-label required">Phone Number</label>
+                            <input type="text" required  maxlength="10" id="phone-no" class="input-style number">
+                        </div>
+                        <!-- input for address -->
+                        <div class="fb-100 d-flex dir-col">
+                            <label for="address" class="input-label required">Address</label>
+                            <input type="text" required maxlength="70" placeholder="Building name, area name" id="address" class="input-style">
+                        </div>
+                        <!-- input for zip code -->
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="zipcode" class="input-label required">Zip Code</label>
+                            <input type="text" required maxlength="10" id="zipcode" class="input-style">
+                        </div>
+                        <!-- input for city/town -->
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="city-town" class="input-label required">City/Town</label>
+                            <input type="text" required maxlength="20" id="city-town" class="input-style">
+                        </div>
+                    </div>
+                    <!-- if the user wishes to add more details which is not mandatory -->
+                    <h4 class="page-title">
+                        Additional Details
+                    </h4>
+                    <div class="contracted d-flex flex-wrap">
+                        <!-- input for nationality -->
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="nationality" class="input-label">Nationality</label>
+                            <input type="text" maxlength="15" id="nationality" class="input-style">
+                        </div>
+                        <!-- input for place of birth -->
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="birth-place" class="input-label">Place Of Birth</label>
+                            <input type="text" maxlength="15" id="birth-place" class="input-style">
+                        </div>
+                        <!-- input for LinkedIn id -->
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="linked-in" class="input-label">LinkedIn</label>
+                            <input type="text" maxlength="30" id="linked-in" class="input-style">
+                        </div>
+                        <!-- input for a website of blog page -->
+                         <div class="fb-100 fb-sm-50 d-flex dir-col"><!-- description-tt" data-tool-tip="Mention the link for your blog page or any website you created for other purposes" -->
+                            <label for="website" class="input-label">Website <!--<i class="fas fa-info-circle smaller"></i> --></label>
+                            <input type="text" maxlength="100" id="website" class="input-style">
+                        </div>
+                    </div>
+                    <!-- an independent button to hide and show 'additional details' part -->
+                    <button type="button" id="per-toggle" class="btn btn-accent medium text-center stretch">Show Additional Information</button>
+                </div>
+            </section>
+            <!-- End of 'personal-details' section -->
+
+
+            <br>
+
+
+            <!-- This section will contain the inputs related to PERSONAL EXPERIENCE -->
+            <section class="d-none disappear" id="experience-section">
+                <div class="page container-md box-shadow b-radius-subtle">
+                    <!-- Title of the 2nd form in this case, title for PERSONAL EXPERIENCE -->
+                    <h3 class="page-title">
+                        Personal Experience
+                    </h3>
+                    <div class="lvl-1">
+                        <div class="fb-100 d-flex dir-col description-tt" data-tool-tip="This short paragraph shows employers that you’ve clearly defined your professional goals and have the necessary skills to excel in the position you’re applying for. Tips -
+                        Describe yourself in short but strong terms.
+                        Mention the job title you're applying for.
+                        Mention some of your achievements">
+                            <label for="cv-objective" class="input-label required">Resume Objective <i class="fas fa-info-circle smaller"></i></label>
+                            <textarea id="cv-objective" rows="2" class="input-style resize"></textarea>
+                            <!-- <span class="max-display"></span> -->
+                        </div>
+                        <div class="fb-100 d-flex dir-col description-tt" data-tool-tip="Skills related to your subject like computer languages you've master, or any other technical or your field related skill">
+                            <label for="skill" class="input-label required">Skills <i class="fas fa-info-circle smaller"></i></label>
+                            <textarea id="skill" placeholder="seperate your skills using period." required rows="2" class="input-style resize"></textarea>
+                            <!-- <span class="max-display"></span> -->
+                        </div>
+                    </div>
+                    <br>
+                    <label class="input-label large">Work Experience</label>
+                    <div id="work-exp" class="lvl-2 d-flex flex-wrap">
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="exp-title1" class="input-label">Designation</label>
+                            <input type="text" id="exp-title1" class="input-style">
+                        </div>
+                        <div class="fb-100 fb-sm-50 d-flex dir-col description-tt" data-tool-tip="place where your work/office resides">
+                            <label for="exp-place1" class="input-label">City/Town <i class="fas fa-info-circle smaller"></i></label>
+                            <input type="text" id="exp-place1" class="input-style"  autocapitalize="words">
+                        </div>
+                        <div class="fb-100 d-flex dir-col">
+                            <label for="exp-company1" class="input-label">Company Name</label>
+                            <input type="text" id="exp-company1" class="input-style"  autocapitalize="words">
+                        </div>
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label class="input-label">Start Date</label>
+                            <div>
+                                <select id="start-date1" class="input-style date sdate">
+                                </select>
+                                <select id="start-month1" class="input-style date smonth">
+                                </select>
+                                <select id="start-year1" class="input-style date syear">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label class="input-label">End Date</label>
+                            <div>
+                                <select id="end-date1" class="input-style date edate">
+                                </select>
+                                <select id="end-month1" class="input-style date emonth">
+                                </select>
+                                <select id="end-year1" class="input-style date eyear">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fb-100 d-flex dir-col description-tt" data-tool-tip="Describe with essential information about the job and the company, mention the tasks, responsibilities, and any competencies developed while working there
+                        Tips - 
+                        Use action-benefit statements to describe your achievements.
+                        Make it easily readable.">
+                            <label for="exp-description1" class="input-label">Description <i class="fas fa-info-circle smaller"></i></label>
+                            <textarea name="des" id="exp-description1" rows="3" class="input-style resize"></textarea>
+                            <!-- <span class="max-display"></span> -->
+                        </div>
+                        <button type="button" class="btn btn-accent mi-1 medium" id="save-clear">Add another work experience</button>
+                        <button type="button" class="btn btn-accent ms-auto medium" id="clear-all">Clear All Work Experience</button>
+                    </div>
+                    <h3 class="page-title">
+                        Education And Qualification
+                    </h3>
+                    <label class="input-label large">Post Graduation</label>
+                    <div id="post-grad" class="lvl-3 d-flex flex-wrap justify-content-center">
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="post-degree" class="input-label">Degree</label>
+                            <input type="text" id="post-degree" class="input-style">
+                        </div>
+                        <div class="fb-100 fb-sm-50 d-flex dir-col description-tt" data-tool-tip="place where you attended your tuitions for the post graduation">
+                            <label for="post-place" class="input-label">City/Town <i class="fas fa-info-circle smaller"></i></label>
+                            <input type="text" id="post-place" class="input-style">
+                        </div>
+                        <div class="fb-100 d-flex dir-col">
+                            <label for="post-institute" class="input-label">Institute</label>
+                            <input type="text" id="post-institute" class="input-style">
+                        </div>
+                        <div class="fb-100 fb-sm-50 d-flex dir-col justify-content-center">
+                            <label for="post-year" class="input-label">Completion year</label>
+                            <input type="text" maxlength="4" id="post-year" class="input-style number">
+                        </div>
+                    </div>
+                    <label class="input-label large fb-100">Bachelor's Degree</label>
+                    <div id="bach-deg" class="lvl-4 d-flex flex-wrap justify-content-center">
+                        <div class="fb-100 fb-sm-50 d-flex dir-col">
+                            <label for="bach-degree" class="input-label">Degree</label>
+                            <input type="text" id="bach-degree" class="input-style">
+                        </div>
+                        <div class="fb-100 fb-sm-50 d-flex dir-col description-tt" data-tool-tip="place where you attended your tuitions for the bachelors degree">
+                            <label for="bach-place" class="input-label">City/Town <i class="fas fa-info-circle smaller"></i></label>
+                            <input type="text" id="bach-place" class="input-style">
+                        </div>
+                        <div class="fb-100 d-flex dir-col">
+                            <label for="bach-institute" class="input-label">Institute</label>
+                            <input type="text" id="bach-institute" class="input-style">
+                        </div>
+                        <div class="fb-100 fb-sm-50 d-flex dir-col justify-content-center">
+                            <label for="bach-year" class="input-label">Completion year</label>
+                            <input type="text" maxlength="4" id="bach-year" class="input-style number">
+                        </div>
+                    </div>
+                    <h3 class="page-title">
+                        Additional Information
+                    </h3>
+                    <div class="contracted">
+                        <div class="d-flex flex-wrap" id="reference">
+                            <label class="input-label large fb-100">References</label>
+                            <div class="fb-100 fb-sm-50 d-flex dir-col">
+                                <label for="referee-name" class="input-label">Referee Name</label>
+                                <input type="text" maxlength="40" id="referee-name" class="input-style">
+                            </div>
+                            <div class="fb-100 fb-sm-50 d-flex dir-col">
+                                <label for="referee-designation" class="input-label">Referee Designation</label>
+                                <input type="text" maxlength="30" id="referee-designation" class="input-style">
+                            </div>
+                            <div class="fb-100 d-flex dir-col">
+                                <label for="referee-company" class="input-label">Company Name</label>
+                                <input type="text" id="referee-company" class="input-style">
+                            </div>
+                            <div class="fb-100 fb-sm-50 d-flex dir-col">
+                                <label for="referee-phone" class="input-label">Phone Number</label>
+                                <input type="text" maxlength="10" id="referee-phone" class="input-style number">
+                            </div>
+                            <div class="fb-100 fb-sm-50 d-flex dir-col">
+                                <label for="referee-email" class="input-label">Email Address</label>
+                                <input type="text" maxlength="60" id="referee-email" class="input-style">
+                            </div>
+                        </div>
+                        <label class="input-label large fb-100">Interests</label>
+                        <div class="fb-100 d-flex dir-col pos-rel">
+                            <label for="hobbies" class="input-label">Hobbies</label>
+                            <textarea id="hobbies" maxlength="250" rows="2" class="input-style resize"></textarea>
+                            <!-- <span class="max-display"></span> -->
+                        </div>
+                    </div>
+                    <button type="button" id="exp-toggle" class="btn btn-accent medium text-center stretch">Show Additional Information</button>
+                </div>
+            </section>
+
+
+
+            <br>
+
+
+
+            <!-- Template Preference Form -->
+            <section class="d-none disappear" id="template-section">
+                <div class="container-md">
+                    <!-- <h3 class="page-title">
+                    </h3> -->
+                    <div class="d-flex flex-wrap g-4 justify-content-around">
+                        <div class="text-center">
+                            <label for="template-1" class="template-card b-radius-subtle box-shadow">
+                                <p class="input-label">Primary</p>
+                                <img src="{% static 'img\CV1.jpg' %}" class="template-img" alt="">
+                            </label>
+                            <input type="radio" name="choose_template" class="radio-style" value="template1/" id="template-1">
+                        </div>
+                        <div class="text-center">
+                            <label for="template-2" class="template-card b-radius-subtle box-shadow">
+                                <p class="input-label">Classic</p>
+                                <img src="{% static 'img\CV2.jpg' %}" class="template-img" alt="">
+                            </label>
+                            <input type="radio" name="choose_template" class="radio-style" value="template2/" id="template-2">
+                        </div>
+                        <div class="text-center">
+                            <label for="template-3" class="template-card b-radius-subtle box-shadow">
+                                <p class="input-label">Modern</p>
+                                <img src="{% static 'img\CV3.jpg' %}" class="template-img" alt="">
+                            </label>
+                            <input type="radio" name="choose_template" class="radio-style" value="template3/" id="template-3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button type="button" class="btn large btn-accent mx-auto personal-form-btn" id="next-btn">
+                next step <i class="fas fa-forward"></i>
+            </button>
+            <button type="button" class="btn-blank mx-auto d-none" id="prev-btn">
+                previous step
+            </button>
+        </form>
+    </section>
+    
+    <script src="{% static 'js\date_and_change.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js\validation.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js\fill_onload.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js\form_script.js' %}" type="text/javascript"></script>
+</body>
+</html>

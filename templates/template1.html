@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primary</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css\style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css\templateStyle.css' %}" />
+    <link rel="shortcut icon" href="{% static 'img\favicon.jpeg' %}" type="image/png" />
+
+  </head>
+  <body>
+    <section class="container-md b-radius-subtle box-shadow-gold mt-1in">
+        <div class="py-1in px-1in d-flex justify-content-between g-1in" id="template">
+          <div class="fb-60">
+            <h1 class="name capitalize larger-2 mb-1" id="full-name"></h1>
+            <p class="content-part text-justify smaller mb-3" id="resume-objective">
+            </p>
+            <div id="experience-section">
+              <h4 class="section-title my-2">Experience</h4>
+              <div class="content-panel mb-3" id="we-1">
+                <p class="content-head small">
+                  <span class="d-in-block mb-1 f-bold " id="company-1"></span>,<br><span id="location-1"></span> — <i id="designation-1"></i>
+                </p>
+                <p class="content-part small">
+                  <span class="d-in-block mb-1 smaller uppercase" id="start-end-date-1"></span><br/>
+                  <span id="description-1"></span>
+                </p>
+              </div>
+              <div class="content-panel mb-3" id="we-2">
+                <p class="content-head small">
+                  <span class="d-in-block mb-1 f-bold " id="company-2"></span>,<br><span id="location-2"></span> — <i id="designation-2"></i>
+                </p>
+                <p class="content-part small">
+                  <span class="d-in-block mb-1 smaller uppercase" id="start-end-date-2"></span><br/>
+                  <span id="description-2"></span>
+                </p>
+              </div>
+              <div class="content-panel mb-3" id="we-3">
+                <p class="content-head small">
+                  <span class = "d-in-block mb-1 f-bold" id="company-3"></span>,<br><span id="location-3"></span> — <i id="designation-3"></i>
+                </p>
+                <p class="content-part small">
+                  <span class="d-in-block mb-1 smaller uppercase" id="start-end-date-3"></span><br/>
+                  <span id="description-3"></span>
+                </p>
+              </div>
+            </div>
+            <div id="education-section">
+              <h4 class="section-title my-2">Education</h4>
+              <div class="content-panel mb-2 small" id="post-section">
+                <p class="content-head">
+                  <span class="d-in-block mb-1 f-bold" id="post-institute"></span>,<br><span class="d-in-block" id="post-place"></span> — <i id="post-degree"></i>
+                </p>
+                <p class="content-part">
+                  <span class="smaller">Completion Year : </span><span class="d-in-block mb-1 smaller" id="post-year"></span>
+                </p>
+              </div>
+              <div class="content-panel mb-2 small" id="bach-section">
+                <p class="content-head">
+                  <span class="d-in-block mb-1 f-bold" id="bach-institute"></span>,<br><span class="d-in-block" id="bach-place"></span> — <i id="bach-degree"></i>
+                </p>
+                <p class="content-part">
+                  <span class="smaller">Completion Year : </span><span class="d-in-block mb-1 smaller" id="bach-year"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="fb-40">
+            <div class="d-flex justify-content-center mb-3" id="image-container">
+              <img height="150px" class="b-radius-subtle" id="profile-image" alt="profile image" />
+            </div>
+            <div class="personal-details my-3">
+              <div class="d-flex align-items-center g-3 mb-2">
+                <i class="fas fa-phone-alt"></i>
+                <p  class="content-part smaller" id="phone-no"></p>
+              </div>
+              <div class="d-flex align-items-center g-3 mb-2">
+                <i class="fas fa-envelope-open-text"></i>
+                <p  class="content-part smaller" id="e-mail"></p>
+              </div>
+              <div class="d-flex align-items-center g-3 mb-2">
+                <i class="fab fa-linkedin-in"></i>
+                <p  class="content-part smaller" id="linkedin-id">N/A</p>
+              </div>
+              <div class="d-flex align-items-center g-3 mb-2">
+                <i class="fas fa-globe"></i>
+                <p  class="content-part smaller" id="website">N/A</p>
+              </div>
+              <div class="d-flex g-3 mb-2">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="content-part smaller">
+                    <p id="address"></p>
+                    <p id="place"></p>
+                    <p id="zip-code"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills">
+              <h4 class="section-title my-2">Skills</h4>
+              <div class="skill-list small" id="skill-container">
+                <!-- <div class="skill-item mb-1"></div> -->
+              </div>
+            </div>
+            <div id="interests-section">
+              <h4 class="section-title my-2">Interests</h4>
+              <p class="content-part" id="hobbies">
+              </p>
+            </div>
+            <div class="references" id="reference-section">
+              <h4 class="section-title my-2">Reference</h4>
+
+              <h5 class="name large capitalize" id="ref-name"></h5>
+              <p class="content-part small" id="ref-designation"></p>
+              <p class="content-part small" id="ref-company"></p>
+              <p class="content-part small" id="ref-phone"></p>
+              <p class="content-part small" id="ref-mail"></p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="container-md">
+        <button
+        type="button"
+        id="pdf-download"
+        onclick="generatePDF(this)"
+        class="btn btn-accent large ms-auto">Generate Document</button>
+    </div>
+    <script src="{% static 'js\script.js' %}"></script>
+
+  </body>
+</html>

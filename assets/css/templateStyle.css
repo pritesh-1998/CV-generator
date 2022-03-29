@@ -1,0 +1,29 @@
+
+/* For test-template */
+.name{
+  font-family: var(--font-main);
+}
+.section-title{
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  color: var(--lightBlue);
+}
+.content-head{
+  font-family: var(--font-main);
+}
+.content-part{
+  font-family: var(--font-primary);
+}
+.skill-item{
+  font-family: var(--font-primary);
+}
+.skill-list-icon::before{
+  content:'#  ';
+}
+.mt-1in {
+  margin-top: 1in;
+}
+.my-1in {
+  margin-top: 1in;
+  margin-bottom: 1in;
+}

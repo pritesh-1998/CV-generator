@@ -1,0 +1,49 @@
+/* For test-template */
+.pe-5in{
+  padding-right: .5in;
+}
+.ps-5in{
+  padding-left: .5in;
+}
+.mt-5{
+  margin-top: 1.55in;
+}
+.section-title{
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+.text-underline{
+  text-decoration: underline;
+  text-decoration-color: var(--muted);
+  text-underline-offset: 7px;
+}
+.content-head{
+  font-family: var(--font-main);
+}
+.content-part{
+  font-family: var(--font-primary);
+}
+.para-indent{
+  padding-left: 1em;
+}
+.para-indent-lg{
+  padding-left: 7.2em;
+}
+.skill-item{
+  font-family: var(--font-primary);
+}
+.skill-list-icon::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f054' " ";
+  color: black;
+}
+.bg-color-left{
+  background-image: linear-gradient(90deg,var(--darkish) 36%,transparent 36%,transparent);
+  background-position: top left ;
+}
+.white-border{
+  border : 10px solid white;
+}

@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css\style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css\template3.css' %}" />
+    <link rel="shortcut icon" href="{% static 'img\favicon.jpeg' %}" type="image/png" />
+
+  </head>
+  <body>
+    <section class="container-md b-radius-subtle box-shadow-gold mt-1in">
+      <div class="pe-5in ps-5in py-1in" id="template">
+        <!-- name and image -->
+        <div class="d-flex justify-content-between align-items-top">
+            <h1 class="name uppercase larger-2 mb-6" id="full-name"></h1>
+            <div class="d-flex justify-content-center" id="image-container">
+                <img width="170px" height="170px" src="img/img-taher.jpeg" class="b-radius-subtle" style="border-radius:50% ;" id="profile-image"  alt="profile image" />
+            </div>
+        </div>
+        <!-- name and image ends here-->
+        <!-- contact and resume objective section -->
+        <div class="d-flex pb-5 b-bottom-right">
+            <div class="personal-details fb-30 b-left-right pe-3in">
+                <h4 class="section-title mb-2 large">Contact</h4>
+                <div class="mb-1">
+                    <i class="fas fa-phone-square-alt d-in-block large"></i>&nbsp;&nbsp;&nbsp;<p class="content-part d-in-block smaller" id="phone-no"></p>
+                </div>
+                <div class="mb-1">
+                    <i class="fas fa-envelope-square d-in-block large"></i>&nbsp;&nbsp;&nbsp;
+                    <p class="content-part d-in-block smaller" id="e-mail"></p>
+                </div>
+                <div class="mb-1">
+                    <i class="fab fa-linkedin d-in-block large"></i>&nbsp;&nbsp;&nbsp;
+                    <p class="content-part d-in-block smaller" id="linkedin-id">N/A</p>
+                </div>
+                <div class="mb-2 d-none">
+                    <h5 class = "section-title  mb-1">Website</h5>
+                    <p  class="content-part small para-indent" id="website">N/A</p>
+                </div>
+                <div class="mb-2 d-none">
+                    <h5 class = "section-title  mb-1">Address</h5>
+                    <div class="content-part small para-indent">
+                        <p id="address"></p>
+                        <p id="place"></p>
+                        <p id="zip-code"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-panel  fb-70 ps-3in">
+                <h4 class="section-title text-underline mb-2 large">Objective</h4>
+                <p class="content-part small" id="resume-objective">
+                </p>
+            </div>
+        </div>
+        <!-- contact and resume objective section ends here-->
+        <div class="d-flex pt-5">
+          <div class="fb-30 b-left-right pe-3in">
+            <div id="education-section" class="mb-3">
+              <h4 class="section-title mb-2 large">Education</h4>
+              <div id="post-section" class="mb-3">
+                <p id="post-degree" class="content-head small f-bold mb-1"></p>
+                <p id="post-institute" class="content-part small mb-1"></p>
+                <p id="post-place" class="d-none"></p>
+                <p id="post-year" class="content-part smaller mb-1"></p>
+              </div>
+              <div id="bach-section">
+                <p id="bach-degree" class="content-head small f-bold mb-1"></p>
+                <p id="bach-institute" class="content-part small mb-1"></p>
+                <p id="bach-place" class="d-none"></p>
+                <p id="bach-year" class="content-part smaller mb-1">  </p>
+              </div>
+            </div>
+            <div id="skills-section">
+              <h4 class="section-title mb-2 large">Skills</h4>
+              <div class="skill-list small" id="skill-container">
+                <!-- <div class="skill-item mb-1"></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="fb-70 ps-3in">
+            <div id="experience-section" class="mb-3">
+              <h4 class="section-title mb-2 large">Experience</h4>
+              <div class="content-panel mb-3" id="we-1">
+                <p id="designation-1" class="uppercase content-title medium mb-2"></p>
+                <p id="company-1" class="f-bold capitalize content-part small d-in-block mb-1"></p><span class="f-bold content-part">&nbsp;&nbsp;|&nbsp;&nbsp;</span><p id="start-end-date-1" class="f-bold capitalize small content-part d-in-block"></p> 
+                <p id="description-1" class="content-part small"></p>
+                <span class="d-none" id="location-1"></span>
+              </div>
+              <div class="content-panel mb-3" id="we-2">
+                <p id="designation-2" class="uppercase content-title medium mb-2"></p>
+                <p id="company-2" class="f-bold capitalize content-part small d-in-block mb-1"></p><span class="f-bold content-part">&nbsp;&nbsp;|&nbsp;&nbsp;</span><p id="start-end-date-2" class="f-bold capitalize small content-part d-in-block"></p> 
+                <p id="description-2" class="content-part small"></p>
+                <span class="d-none" id="location-2"></span>
+              </div>
+              <div class="content-panel mb-3" id="we-3">
+                <p id="designation-3" class="uppercase content-title medium mb-2"></p>
+                <p id="company-3" class="f-bold capitalize content-part small d-in-block mb-1"></p><span class="f-bold content-part">&nbsp;&nbsp;|&nbsp;&nbsp;</span><p id="start-end-date-3" class="f-bold capitalize small content-part d-in-block"></p> 
+                <p id="description-3" class="content-part small"></p>
+                <span class="d-none" id="location-3"></span>
+              </div>
+            </div>
+            <div id="reference-section" class="d-none">
+              <h4 class="section-title my-2">Reference</h4>
+
+              <h5 class="d-none name medium capitalize" id="ref-name"></h5>
+              <p class="d-none content-part small" id="ref-designation"></p>
+              <p class="d-none content-part small" id="ref-company"></p>
+              <p class="d-none content-part small" id="ref-phone"></p>
+              <p class="d-none content-part small" id="ref-mail"></p>
+            </div>
+            <div id="interests-section">
+              <h4 class="section-title mb-2 large">Interests</h4>
+              <p class="content-part small" id="hobbies">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-md">
+        <button
+        type="button"
+        id="pdf-download"
+        onclick="generatePDF(this)"
+        class="btn btn-accent large ms-auto">Generate Document</button>
+    </div>
+    <script src="{% static 'js\script.js' %}"></script>
+    <script src="{% static 'js\only_year.js' %}"></script>
+
+
+  </body>
+</html>
