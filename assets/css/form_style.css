@@ -186,8 +186,8 @@ select.input-style{
   white-space: wrap;
   transform: scale(0);
   transition:
-  transform ease-out 250ms 1000ms,
-  bottom ease-out 250ms 1000ms;
+  transform ease-out 250ms 200ms,
+  bottom ease-out 250ms 200ms;
 }
 .description-tt:hover::after{
   transform: scale(1);

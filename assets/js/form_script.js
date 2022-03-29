@@ -105,8 +105,8 @@ function nextForm(e) {
     Add_RemoveClass(e.target, "experience-form-btn", "personal-form-btn");
     Add_RemoveClass(previous_button, "personal-form-btn", "d-none");
 
-    disable_enable([e.target, previous_button], 3000);
-
+    disable_enable([e.target, previous_button], 500);
+    document.title = "Personal Experience";
     add_class(personal_icon, "complete");
     Add_RemoveClass(personal_icon, "box-shadow-green", "box-shadow");
     // Transition part
@@ -115,10 +115,12 @@ function nextForm(e) {
   else if (e.target.classList.contains("experience-form-btn") && valid_flag) {
     Add_RemoveClass(e.target, "template-form-btn", "experience-form-btn");
     Add_RemoveClass(previous_button, "experience-form-btn", "personal-form-btn");
+    disable_enable([previous_button], 500);
     // Changing some property of button
     e.target.textContent = 'Submit';
     e.target.disabled = true;
     add_class(experience_icon, "complete");
+    document.title = "Choose Template";
     Add_RemoveClass(experience_icon, "box-shadow-green", "box-shadow");
     // Transition pare
     displayWithTransition(experience_form, template_form, -50);
@@ -127,6 +129,8 @@ function nextForm(e) {
     saveValuesToLocalStorage(inputList);
     // When the user submits the form, this will uncheck all the selected templates
     unCheck(templates);
+    Add_RemoveClass(template_icon, "box-shadow", "box-shadow-green");
+    remove_class(template_icon, "complete");
     e.target.disabled = true;
     window.open(redirect_link, '_blank');
     // window.location.href = "test_template.html";
@@ -134,26 +138,23 @@ function nextForm(e) {
 }
 
 function previousForm(e) {
-  disable_enable([e.target, next_button], 3000);
+  disable_enable([e.target, next_button], 500);
   if (e.target.classList.contains("personal-form-btn")) {
-
     Add_RemoveClass(e.target, "d-none", "personal-form-btn");
     Add_RemoveClass(next_button, "personal-form-btn", "experience-form-btn");
-
+    document.title = "Personal Details";
     displayWithTransition(experience_form, personal_form, 50);
-
   }
   else if (e.target.classList.contains("experience-form-btn")) {
-
     Add_RemoveClass(e.target, "personal-form-btn", "experience-form-btn");
     Add_RemoveClass(next_button, "experience-form-btn", "template-form-btn");
     // adding the text and the icon which was previously removed for next step
     next_button.textContent = 'next step ';
     const icon = document.createElement("i");
+    document.title = "Personal Experience";
     add_class(icon, "fa");
     add_class(icon, "fa-forward");
     next_button.appendChild(icon);
-
     displayWithTransition(template_form, experience_form, 50);
   }
 }

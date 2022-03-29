@@ -139,7 +139,5 @@ function isNotNullAndNotEmpty(value){
 // ------------------------------------------ Filling ends here
 
 function generatePDF(e) {
-  document.title = ".";
   window.print();
-  document.title = "Template name";
 }
