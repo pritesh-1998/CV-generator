@@ -330,6 +330,23 @@ body {
     flex-wrap: nowrap;
   }
 }
+
+*{
+  -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+  color-adjust: exact !important;                 /*Firefox*/
+}
+@page {
+  margin: 0;
+}
+/* @media (max-width:856px) {
+  #template{
+    display:none;
+  }
+  .ms-auto{
+    margin-left:auto;
+    margin-right:auto;
+  }
+} */
 @media print{
   body{
     background-color: transparent;
